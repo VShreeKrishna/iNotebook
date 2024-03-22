@@ -2,15 +2,24 @@ import React,{useContext,useEffect,useRef,useState} from "react";
 import noteContext from "../context/notes/noteContext";
 import Noteitem from "./Noteitem";
 import AddNote from "./AddNote";
+import { useNavigate } from "react-router";
 
-const Notes =()=>{
+const Notes =(props)=>{
     const context = useContext(noteContext);
-    const {notes,getNotes,editNotes} = context
-    useEffect(() => {
-      getNotes();
-      // eslint-disable-next-line 
-    }, [])
 
+    const {notes,getNotes,editNotes} = context
+    let navigate = useNavigate();
+    // const { notes, getNotes, editNotes } = context;
+    useEffect(() => {
+        if(localStorage.getItem('token')){
+            getNotes()
+        } 
+        else {
+            navigate('/Login')
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+    
     const ref = useRef(null)
     const refClose = useRef(null)
     const [note, setNote] = useState({id:"",etitle: "", edescription:"",etag:""})
@@ -25,6 +34,7 @@ const Notes =()=>{
       console.log("updating the note",note)
       editNotes(note.id,note.etitle,note.edescription,note.etag)
     refClose.current.click();
+    props.showAlert("Updated Successfully","success")
 
   }
   const onChange=(e)=>{
@@ -33,7 +43,7 @@ const Notes =()=>{
     
     return(
         <>
-        <AddNote/>
+        <AddNote showAlert={props.showAlert}/>
         <button ref={ref} type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button>
@@ -70,7 +80,7 @@ const Notes =()=>{
         <div className="row my-3">
       <h2>Your Notes</h2>
       {notes.map((note)=>{
-        return <Noteitem key ={note._id} updateNote={updateNote} note={note} />
+        return <Noteitem key ={note._id} updateNote={updateNote} showAlert={props.showAlert} note={note} />
         })}
       </div>
       </>
