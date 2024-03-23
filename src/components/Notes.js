@@ -78,7 +78,7 @@ const Notes =(props)=>{
   </div>
 </div>
         <div className="row my-3">
-      <h2>Your Notes</h2>
+      <h2 className="mx-3 " style={{color:'#2B4257', fontWeight:'bold'}}>Your Notes</h2>
       {notes.map((note)=>{
         return <Noteitem key ={note._id} updateNote={updateNote} showAlert={props.showAlert} note={note} />
         })}

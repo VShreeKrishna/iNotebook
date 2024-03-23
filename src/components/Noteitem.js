@@ -12,7 +12,7 @@ const Noteitem = (props) => {
         border: '1px solid #ced4da',
         borderRadius: '10px',
         padding: '1rem',
-        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.1)' ,
     };
 
     // Define styles for title and description
@@ -29,7 +29,7 @@ const Noteitem = (props) => {
 
     // Define styles for icons
     const iconStyles = {
-        color: '#007bff', // Blue pencil icon
+        color: '#001233', // Blue pencil icon
         cursor: 'pointer',
         marginRight: '0.5rem',
     };
