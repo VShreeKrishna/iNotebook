@@ -47,7 +47,7 @@ const Notes =(props)=>{
         <button ref={ref} type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button>
-<div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" tyle={{ backgroundColor: '#F7F7F7', color: '#333', padding: '30px', borderRadius: '10px', boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.1)' }}>
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
@@ -55,7 +55,7 @@ const Notes =(props)=>{
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div className="modal-body">
-      <form className="my-3">
+      <form className="my-3" >
   <div className="mb-3">
     <label htmlFor="Title" className="form-label">Title</label>
     <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle}aria-describedby="emailHelp" onChange={onChange}  minLength={5} required/>

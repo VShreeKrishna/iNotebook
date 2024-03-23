@@ -20,20 +20,20 @@ const AddNote = (props) => {
   return (
     <div className="container my-3">
         <h2>Add a new Note</h2>
-         <form className="my-3">
+         <form className="my-3" style={{ backgroundColor: '#F7F7F7', color: '#333', padding: '30px', borderRadius: '10px', boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.1)' }}>
   <div className="mb-3">
     <label htmlFor="Title" className="form-label">Title</label>
-    <input type="text" className="form-control" id="title" name="title"aria-describedby="emailHelp" value={note.title}onChange={onChange}  minLength={5} required/>
+    <input type="text" className="form-control" id="title" name="title"aria-describedby="emailHelp" value={note.title}onChange={onChange}  minLength={5} required  style={{ backgroundColor: '#ECF0F1', color: '#333', border: 'none', borderRadius: '5px', padding: '10px' }}/>
   </div>
   <div className="mb-3">
-    <label htmlFor="description" className="form-label">Description</label>
-    <input type="text" className="form-control" id="description" name="description" value={note.description} onChange={onChange}  minLength={5} required/>
+    <label htmlFor="description" className="form-label" >Description</label>
+    <input type="text" className="form-control" id="description" name="description" value={note.description} onChange={onChange}  minLength={5} required  style={{ backgroundColor: '#ECF0F1', color: '#333', border: 'none', borderRadius: '5px', padding: '10px' }}/>
   </div>
   <div className="mb-3">
     <label htmlFor="tag" className="form-label">Tag</label>
-    <input type="text" className="form-control" id="tag" name="tag" value={note.tag} onChange={onChange}  minLength={5} required/>
+    <input type="text" className="form-control" id="tag" name="tag" value={note.tag} onChange={onChange}  minLength={5} required  style={{ backgroundColor: '#ECF0F1', color: '#333', border: 'none', borderRadius: '5px', padding: '10px' }}/>
   </div>
-  <button  disabled={note.title.length<5 || note.description.length<5}type="submit" className="btn btn-primary" onClick={handleClick}>Add Note</button>
+  <button  disabled={note.title.length<5 || note.description.length<5}type="submit" className="btn btn-primary"style={{ backgroundColor: '#3498db', border: 'none', borderRadius: '5px', padding: '10px 20px', fontWeight: 'bold' }} onClick={handleClick}>Add Note</button>
  
 </form>
     </div>
