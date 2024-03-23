@@ -51,22 +51,25 @@ const Notes =(props)=>{
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
-        <h1 className="modal-title fs-5" id="exampleModalLabel">Edit Note</h1>
+        <h1 className="modal-title fs-5" id="exampleModalLabel"style={{color:'#2B4257', fontWeight:'bold'}}>Edit Note</h1>
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div className="modal-body">
-      <form className="my-3" >
+      <form className="my-3" style={{ backgroundColor: '#F7F7F7', color: '#333', padding: '30px', borderRadius: '10px', boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.1)' }} >
   <div className="mb-3">
-    <label htmlFor="Title" className="form-label">Title</label>
-    <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle}aria-describedby="emailHelp" onChange={onChange}  minLength={5} required/>
+    <label htmlFor="Title" className="form-label"style={{color:'#2B4257',fontSize: '1rem',
+        fontWeight: 'bold'}}>Title</label>
+    <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle}aria-describedby="emailHelp" onChange={onChange}  minLength={5} required style={{ backgroundColor: '#ECF0F1', color: '#333', border: 'none', borderRadius: '5px', padding: '10px'}}/>
   </div>
   <div className="mb-3">
-    <label htmlFor="description" className="form-label">Description</label>
-    <input type="text" className="form-control" id="edescription" name="edescription"  value={note.edescription}onChange={onChange} minLength={5} required/>
+    <label htmlFor="description" className="form-label"style={{color:'#2B4257',fontSize: '1rem',
+        fontWeight: 'bold'}}>Description</label>
+    <input type="text" className="form-control" id="edescription" name="edescription"  value={note.edescription}onChange={onChange} minLength={5} required style={{ backgroundColor: '#ECF0F1', color: '#333', border: 'none', borderRadius: '5px', padding: '10px'}}/>
   </div>
   <div className="mb-3">
-    <label htmlFor="tag" className="form-label">Tag</label>
-    <input type="text" className="form-control" id="etag" name="etag" value={note.etag} onChange={onChange}  minLength={5} required/>
+    <label htmlFor="tag" className="form-label"style={{color:'#2B4257',fontSize: '1rem',
+        fontWeight: 'bold'}}>Tag</label>
+    <input type="text" className="form-control" id="etag" name="etag" value={note.etag} onChange={onChange}  minLength={5} required style={{ backgroundColor: '#ECF0F1', color: '#333', border: 'none', borderRadius: '5px', padding: '10px'}}/>
   </div>
  </form>
       </div>

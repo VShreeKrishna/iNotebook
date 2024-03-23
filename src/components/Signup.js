@@ -44,7 +44,7 @@ const Signup = (props) => {
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email</label>
                     <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" onChange={onChange} style={{ backgroundColor: '#ECF0F1', color: '#333', border: 'none', borderRadius: '5px', padding: '10px'}} placeholder='Enter your email' />
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    {/* <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div> */}
                 </div>
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>
@@ -54,7 +54,7 @@ const Signup = (props) => {
                     <label htmlFor="cpassword" className="form-label">Confirm Password</label>
                     <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={onChange} minLength={5} required style={{ backgroundColor: '#ECF0F1', color: '#333', border: 'none', borderRadius: '5px', padding: '10px' }} placeholder='Enter Your Password' />
                 </div>
-                <button type="submit" className="btn btn-primary" style={{ backgroundColor: '#3498db', border: 'none', borderRadius: '5px', padding: '10px 20px', fontWeight: 'bold' }}>Submit</button>
+                <button type="submit" className="btn btn-primary" style={{ backgroundColor: '#001233', border: 'none', borderRadius: '5px', padding: '10px 20px', fontWeight: 'bold' }}>Submit</button>
             </form>
         </div>
     );
